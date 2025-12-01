@@ -20,3 +20,5 @@ After estimating the mixing matrix of every component $A$ and the covariance mat
 $$\theta = (f_{\text{NL}}^{\text{th}}, B^{\text{dust}}_{i_1i_2i_3}, B^{\text{sync}}_{i_1i_2i_3}) $$
 
 Where $f_{\text{NL}}^{\text{th}}$ depends on the theoretical model chosen for the CMB bispectrum.
+
+In binned_bisp_ext.py there is the code that I have written to compute the observed multi-frequency binned bispectrum needed to compute $\theta$.
