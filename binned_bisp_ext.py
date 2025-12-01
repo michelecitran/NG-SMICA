@@ -135,7 +135,7 @@ def IQU_2_TEB(maps, nside = 256, lmax = 767):
 
 # bisp_name: Change directory based on content
 
-# maps loading:
+# maps loading: templates or observed maps
 
 direc = "/sps/litebird/Users/mcitran/smica/"
 
