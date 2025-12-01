@@ -276,7 +276,7 @@ if odd_flag==1:
 
 ## Bispectrum computation
 
-for i1 in range(nbin):
+for i1 in tqdm(range(nbin)):
    for i2 in range(i1, nbin):
       for i3 in range(i2, nbin):
             if bin_list[i3][0] <= bin_list[i1][1] + bin_list[i2][1]:
