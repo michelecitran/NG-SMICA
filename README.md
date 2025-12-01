@@ -21,6 +21,12 @@ $$\theta = (f_{\text{NL}}^{\text{th}}, B^{\text{dust}}_{i_1i_2i_3}, B^{\text{syn
 
 Where $f_{\text{NL}}^{\text{th}}$ depends on the theoretical model chosen for the CMB bispectrum.
 
+Assuming a gaussian likelihood describing the bispectrum in the weakly non-Gaussian case, it is possible to compute the parameters via the bispectrum variance
+
+$$ Var(B)^{d_1d_2d_3, d'_1d'1_2d'_3}_{l_1l_2l_3} \propto C^{d_1d'_1}_{l_1}C^{d_2d'_2}_{l_2}C^{d_3d'_3}_{l_3}$$
+
+where the proportional factor changes for the even and odd case.
+
 In binned_bisp_ext.py there is the code that I wrote to compute the observed multi-frequency binned bispectrum needed to compute $\theta$.
 
 Input: Frequency maps of the observed sky.
