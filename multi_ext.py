@@ -96,8 +96,7 @@ def get_h_000(l1, l2, l3):
     if result.size > 0:
         return (result[0])**2  
     else: 
-        print(l1,l2,l3)
-        return None
+        raise ValueError("Invalid even triplet", l1,l2,l3)
 
 h_odd = np.loadtxt("h_tilde_2m1m1.txt")
 def get_h_2m1m1(l1, l2, l3):
@@ -106,8 +105,7 @@ def get_h_2m1m1(l1, l2, l3):
     if result.size > 0:
         return (result[0])**2  
     else: 
-        print(l1,l2,l3)
-        return None
+        raise ValueError("Invalid odd triplet", l1,l2,l3)
 
 def get_bin_index(i1, i2, i3, nb):
    i = [i1, i2, i3]
