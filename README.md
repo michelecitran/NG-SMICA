@@ -1,5 +1,5 @@
 # NG-SMICA
-I prepared this directory as a code sample for my application to the CMB group at the University of Oslo. 
+I prepared this directory as a code sample for my application to the CMB group at the University of Oslo. As I work on a cluster (the code takes several hours to run) it is structured to work with parallel jobs with slurm.
 
 It contains the multi-frequency multi-component binned bispectrum estimation explained in Citran et al. (arXiv:2511.22641).
 
