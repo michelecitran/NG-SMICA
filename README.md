@@ -21,7 +21,7 @@ $$\theta = (f_{\text{NL}}^{\text{th}}, B^{\text{dust}}_{i_1i_2i_3}, B^{\text{syn
 
 Where $f_{\text{NL}}^{\text{th}}$ depends on the theoretical model chosen for the CMB bispectrum.
 
-Assuming a gaussian likelihood describing the bispectrum in the weakly non-Gaussian case, it is possible to compute the parameters via the bispectrum variance
+Assuming a gaussian likelihood describing the bispectrum in the weakly non-Gaussian case, it is possible to compute the parameters via the bispectrum variance 
 
 $$ Var(B)^{d_1d_2d_3, d'_1d'1_2d'_3}_{l_1l_2l_3} \propto C^{d_1d'_1}_{l_1}C^{d_2d'_2}_{l_2}C^{d_3d'_3}_{l_3}$$
 
@@ -33,8 +33,16 @@ Input: Frequency maps of the observed sky.
 
 Output: Observed cross-frequency bispectrum.
 
+Summary: It is based on the property of the triple (spin-weighted) spherical harmonics integral
+
+$$\int d \Omega  \ _{s_1}\mathcal{Y}_{l_1m_1} \ _{s_2}\mathcal{Y}_{l_2m_2} \ _{s_3}\mathcal{Y}_{l_3m_3} \propto \begin{pmatrix} l_1 & l_2 & l_3 \\ 
+m_1 & m_2 & m_3 \end{pmatrix}\begin{pmatrix} l_1 & l_2 & l_3 \\ 
+-s_1 & -s_2 & -s_3 \end{pmatrix}$$
+
 In multi_ext.py there is the code that I wrote to compute the parameters given $A$ and $\textbf{C}$ from SMICA and the observed bispectrum from the previous code.
 
 Input: $A$ and $\textbf{C}$ from SMICA, and the observed bispectrum from the other code.
 
 Output: estimated $f_{\text{NL}}^{\text{th}}$ and $B^{\text{dust}}_{i_1i_2i_3}$ and  $B^{\text{sync}}_{i_1i_2i_3})$ both even and odd.
+
+Summary: It is based on the likelihood
