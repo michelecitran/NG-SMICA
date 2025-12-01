@@ -22,4 +22,11 @@ $$\theta = (f_{\text{NL}}^{\text{th}}, B^{\text{dust}}_{i_1i_2i_3}, B^{\text{syn
 Where $f_{\text{NL}}^{\text{th}}$ depends on the theoretical model chosen for the CMB bispectrum.
 
 In binned_bisp_ext.py there is the code that I wrote to compute the observed multi-frequency binned bispectrum needed to compute $\theta$.
+
+Inputs: Frequency maps of the observed sky. 
+Output: Observed cross-frequency bispectrum
+
 In multi_ext.py there is the code that I wrote to compute the parameters given $A$ and $\textbf{C}$ from SMICA and the observed bispectrum from the previous code.
+
+Input: $A$ and $\textbf{C}$ from SMICA, and the observed bispectrum from the other code
+Output: estimated $f_{\text{NL}}^{\text{th}}$ and $B^{\text{dust}}_{i_1i_2i_3}$ and  $B^{\text{sync}}_{i_1i_2i_3})$ both even and odd
