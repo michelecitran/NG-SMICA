@@ -219,7 +219,7 @@ if odd_flag==1:
 # sync_T=0;sync_Q=0;sync_U=0
 
 
-## Filtered computation
+## Filtered maps computation
 filt_map_list_s0 = []
 if odd_flag==1:
    filt_map_list_sm1 = []
