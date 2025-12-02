@@ -25,7 +25,7 @@ Assuming a gaussian likelihood describing the bispectrum in the weakly non-Gauss
 
 $$ Var(B)^{d_1d_2d_3, d'_1d'1_2d'_3}_{l_1l_2l_3} \propto C^{d_1d'_1}_{l_1}C^{d_2d'_2}_{l_2}C^{d_3d'_3}_{l_3}$$
 
-where the factor changes for the even and odd case.
+where the factor changes for the $l_1+l_2+l_3$ even and $l_1+l_2+l_3$ odd case.
 
 1) In binned_bisp_ext.py there is the code that I wrote to compute the observed multi-frequency binned bispectrum needed to compute $\theta$.
 
