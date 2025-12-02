@@ -82,10 +82,6 @@ var_contr = oe.contract_expression("ai,bj,ck->abcijk", (n_channel,n_channel), (n
 T_contr = oe.contract_expression("a,b,c,abcijk,i,j,k", (n_channel,),(n_channel,),(n_channel,), (n_channel,n_channel,n_channel, n_channel,n_channel,n_channel), (n_channel,),(n_channel,),(n_channel,))
 T_hat_contr = oe.contract_expression("a,b,c,abcijk,ijk", (n_channel,),(n_channel,),(n_channel,), (n_channel,n_channel,n_channel, n_channel,n_channel,n_channel), (n_channel,n_channel,n_channel))
 
-T_hat_noise_contr = oe.contract_expression("da,db,dc,abcijk,ijk->d", (n_channel,n_channel),(n_channel,n_channel),(n_channel,n_channel), (n_channel,n_channel,n_channel, n_channel,n_channel,n_channel), (n_channel,n_channel,n_channel))
-T_comp_noise_contr = oe.contract_expression("da,db,dc,abcijk,i,j,k->d", (n_channel,n_channel),(n_channel,n_channel),(n_channel,n_channel), (n_channel,n_channel,n_channel, n_channel,n_channel,n_channel), (n_channel,), (n_channel,), (n_channel,))
-T_noise_noise_contr = oe.contract_expression("da,db,dc,abcijk,ip,jp,kp->dp", (n_channel,n_channel),(n_channel,n_channel),(n_channel,n_channel), (n_channel,n_channel,n_channel, n_channel,n_channel,n_channel), (n_channel,n_channel), (n_channel,n_channel), (n_channel,n_channel))
-
 ## Functions
 
 # precomputed 3j symbols
@@ -96,7 +92,7 @@ def get_h_000(l1, l2, l3):
     if result.size > 0:
         return (result[0])**2  
     else: 
-        raise ValueError("Invalid even triplet", l1,l2,l3)
+        raise ValueError("Invalid even triplet:", l1,l2,l3)
 
 h_odd = np.loadtxt("h_tilde_2m1m1.txt")
 def get_h_2m1m1(l1, l2, l3):
@@ -105,7 +101,7 @@ def get_h_2m1m1(l1, l2, l3):
     if result.size > 0:
         return (result[0])**2  
     else: 
-        raise ValueError("Invalid odd triplet", l1,l2,l3)
+        raise ValueError("Invalid odd triplet:", l1,l2,l3)
 
 def get_bin_index(i1, i2, i3, nb):
    i = [i1, i2, i3]
